@@ -20,7 +20,7 @@ const slides = [
     },
     {
         id: 'lunch',
-        image: '/images/hero2.png',
+        image: '/images/hero-image1.jpg',
         alt: 'Nutrition app scanning a lunch bowl',
         caloriesLeft: 410,
         caloriesPct: 46,
@@ -34,7 +34,7 @@ const slides = [
     },
     {
         id: 'dinner',
-        image: '/images/hero3.png',
+        image: '/images/hero-image2.jpg',
         alt: 'Nutrition app showing a dinner log',
         caloriesLeft: 180,
         caloriesPct: 22,

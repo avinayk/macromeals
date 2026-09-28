@@ -11,7 +11,7 @@ import HeroAnimated from '@/components/hero/HeroAnimated'
 
 export default function HeroBanner() {
     return (
-        <section className="relative overflow-hidden py-14 sm:py-20 lg:py-24">
+        <section className="relative overflow-hidden py-14 sm:py-20">
 
             <div
                 aria-hidden
