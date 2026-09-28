@@ -2,24 +2,17 @@ import React from 'react'
 import {
     IconStarFilled,
     IconCheck,
-    IconFlame,
-    IconScan,
-    IconToolsKitchen2,
     IconArrowUpRight,
     IconBrandAppstore,
     IconBrandGooglePlay,
 } from '@tabler/icons-react'
+import HeroAnimated from '@/components/hero/HeroAnimated'
 
-const macros = [
-    { label: 'Protein', value: '92g', pct: 78 },
-    { label: 'Carbs', value: '140g', pct: 55 },
-    { label: 'Fat', value: '48g', pct: 40 },
-]
 
 export default function HeroBanner() {
     return (
         <section className="relative overflow-hidden py-14 sm:py-20 lg:py-24">
-            {/* soft dotted grid, fades out toward the bottom */}
+
             <div
                 aria-hidden
                 className="pointer-events-none absolute inset-0 -z-10 opacity-60 [mask-image:linear-gradient(to_bottom,black,transparent_85%)]"
@@ -145,72 +138,8 @@ export default function HeroBanner() {
                         </ul>
                     </div>
 
+                    <HeroAnimated />
 
-                    <div className="relative mx-auto w-full max-w-[500px]">
-
-                        <div
-                            aria-hidden
-                            className="absolute inset-x-4 inset-y-8 -z-10 rounded-[40px] bg-gradient-to-br from-green-light via-white to-lime/30"
-                        />
-
-                        <div className="h-[600px]">
-                            <img
-                                src="/images/hero-image.jpg"
-                                alt="Nutrition app showing a daily meal log"
-                                className="relative mx-auto h-full object-cover w-full drop-shadow-2xl rounded-2xl overflow-hidden"
-                            />
-                        </div>
-
-                        <div className="absolute -left-2 top-10 w-44 rounded-2xl border border-white/70 bg-white/85 p-4 shadow-xl shadow-black/10 backdrop-blur-md sm:-left-8">
-                            <div className="flex items-center gap-2 text-xs font-medium text-muted">
-                                <span className="flex size-8 items-center justify-center rounded-full bg-green/20">
-                                    <IconFlame className="size-4 text-green-dark" />
-                                </span>
-                                Calories left
-                            </div>
-                            <p className="mt-2 text-2xl font-semibold tracking-tight text-fg">
-                                640 <span className="text-sm font-medium text-muted">kcal</span>
-                            </p>
-                            <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-muted/10">
-                                <div className="h-full w-[68%] rounded-full bg-green" />
-                            </div>
-                        </div>
-
-
-                        <div className="absolute -right-2 top-1/3 flex items-center gap-3 rounded-xl border border-white/70 bg-white/85 py-2.5 pl-2.5 pr-4 shadow-xl shadow-black/10 backdrop-blur-md sm:-right-6">
-                            <span className="flex size-9 items-center justify-center rounded-md bg-green text-white">
-                                <IconScan className="size-5" />
-                            </span>
-                            <div className="text-xs">
-                                <p className="font-semibold text-fg mb-[0.9px]">Grilled salmon</p>
-                                <p className="text-muted">412 kcal · scanned</p>
-                            </div>
-                        </div>
-
-
-                        <div className="absolute -bottom-12 left-4 right-4 rounded-2xl border border-white/70 bg-white/90 p-4 shadow-xl shadow-black/10 backdrop-blur-md sm:left-8 sm:right-8">
-                            <div className="mb-4 flex items-center gap-2 text-xs font-medium text-muted">
-                                <IconToolsKitchen2 className="size-4 text-green" />
-                                Today&apos;s macros
-                            </div>
-                            <div className="grid grid-cols-3 gap-4">
-                                {macros.map((m) => (
-                                    <div key={m.label}>
-                                        <div className="flex items-baseline justify-between text-xs">
-                                            <span className="font-medium text-muted">{m.label}</span>
-                                            <span className="font-semibold text-fg">{m.value}</span>
-                                        </div>
-                                        <div className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-line">
-                                            <div
-                                                className="h-full rounded-full bg-green"
-                                                style={{ width: `${m.pct}%` }}
-                                            />
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
