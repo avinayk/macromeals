@@ -199,7 +199,9 @@ function FeaturePreview({ type }: { type: string }) {
         return (
             <div className="mt-7 rounded-xl border border-line bg-white p-3">
                 <div className="flex gap-2">
-                    <div className="size-12 shrink-0 rounded-lg bg-gradient-to-br from-green-light to-lime/30" />
+                    <div className="size-12 shrink-0 rounded-lg overflow-hidden bg-gradient-to-br from-green-light to-lime/30">
+                        <img src="/images/hero1.png" alt="image" className='w-full h-full object-cover' />
+                    </div>
 
                     <div className="min-w-0">
                         <p className="truncate text-xs font-semibold text-fg">
@@ -310,7 +312,7 @@ export default function CoreFeatures() {
                                     duration: 0.3,
                                     ease: "easeOut",
                                 }}
-                                className={`group relative overflow-hidden rounded-2xl border border-line bg-white p-5 shadow-sm transition-shadow duration-300 hover:shadow-xl hover:shadow-black/5 sm:p-6 ${index < 3
+                                className={`group relative overflow-hidden rounded-3xl border border-line bg-white p-5 shadow-sm transition-shadow duration-300 hover:shadow-xl hover:shadow-black/5 sm:p-6 ${index < 3
                                     ? "lg:col-span-2"
                                     : "lg:col-span-3"
                                     }`}

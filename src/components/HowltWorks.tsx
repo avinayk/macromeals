@@ -79,7 +79,7 @@ export default function HowItWorks() {
                 className="pointer-events-none absolute left-1/2 top-0 h-[420px] w-[700px] -translate-x-1/2 rounded-full bg-white/10 blur-[120px]"
             />
 
-            <div className="container relative mx-auto px-5 md:px-8 bg-green-dark text-white rounded-2xl py-14 sm:py-20">
+            <div className="container relative mx-auto px-5 md:px-8 bg-green-dark text-white rounded-3xl py-14 sm:py-20">
                 <motion.div
                     initial={{ opacity: 0, y: 24 }}
                     whileInView={{ opacity: 1, y: 0 }}
