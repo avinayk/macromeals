@@ -48,7 +48,7 @@ const slides = [
     },
 ]
 
-const INTERVAL = 4500
+const INTERVAL = 3500
 
 
 function useCountUp(target: number, duration = 900): number {

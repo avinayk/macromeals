@@ -42,3 +42,7 @@ body {
   color: var(--fg);
   font-family: var(--font-sans);
 }
+
+.swiper-pagination-bullet-active {
+  background: var(--green) !important;
+}

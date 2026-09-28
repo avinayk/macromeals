@@ -11,7 +11,9 @@ import {
     IconScan,
     IconTarget,
     IconTrendingUp,
-    IconAdjustmentsStar
+    IconAdjustmentsStar,
+    IconMapPin,
+    IconEdit,
 } from "@tabler/icons-react";
 
 const features = [
@@ -21,6 +23,7 @@ const features = [
         description:
             "Set calorie and macro targets that match your body, activity and goals.",
         type: "calculator",
+        button: "Calculate your macros",
     },
     {
         icon: IconPlus,
@@ -28,6 +31,7 @@ const features = [
         description:
             "Quickly log meals and keep your daily nutrition organized in one place.",
         type: "logging",
+        button: "Log a meal",
     },
     {
         icon: IconScan,
@@ -35,6 +39,7 @@ const features = [
         description:
             "Scan your food with AI and get a nutrition estimate in seconds.",
         type: "scanner",
+        button: "Scan your meal",
     },
     {
         icon: IconChefHat,
@@ -42,6 +47,7 @@ const features = [
         description:
             "Discover recipes designed around your calorie and macro targets.",
         type: "recipes",
+        button: "Explore recipes",
     },
     {
         icon: IconChartBar,
@@ -49,6 +55,31 @@ const features = [
         description:
             "Understand your daily nutrition with simple, useful progress insights.",
         type: "progress",
+        button: "View your progress",
+    },
+    {
+        icon: IconMapPin,
+        title: "Nearby Meal Finder",
+        description:
+            "Find macro-friendly meals near you from local restaurants that align with your daily nutrition targets.",
+        type: "nearby",
+        button: "Find meals near you",
+    },
+    {
+        icon: IconScan,
+        title: "Indigenous Meal Scan",
+        description:
+            "Track Ghanaian and Nigerian dishes with intelligent meal scanning designed around the foods you actually eat.",
+        type: "indigenous",
+        button: "Scan indigenous meals",
+    },
+    {
+        icon: IconEdit,
+        title: "Fix Scan Results",
+        description:
+            "Correct AI scan mistakes instantly by editing meal names, portions, and nutrition data for more accurate tracking.",
+        type: "fix-scan",
+        button: "Fix scan results",
     },
 ];
 
@@ -221,6 +252,133 @@ function FeaturePreview({ type }: { type: string }) {
         );
     }
 
+    if (type === "nearby") {
+        return (
+            <div className="mt-7 rounded-xl border border-line bg-white p-3">
+                <div className="flex items-center gap-2">
+                    <div className="flex size-7 items-center justify-center rounded-lg bg-green-light text-green">
+                        <IconMapPin size={14} />
+                    </div>
+
+                    <div>
+                        <p className="text-xs font-semibold text-fg">
+                            Meals near you
+                        </p>
+                        <p className="text-[10px] text-muted">
+                            Macro-friendly options
+                        </p>
+                    </div>
+                </div>
+
+                <div className="mt-3 space-y-2">
+                    {[
+                        ["Chicken Rice Bowl", "540 kcal"],
+                        ["Jollof & Grilled Chicken", "620 kcal"],
+                    ].map(([meal, calories]) => (
+                        <div
+                            key={meal}
+                            className="flex items-center justify-between rounded-md bg-green-light/60 px-2.5 py-2"
+                        >
+                            <span className="text-[11px] font-medium text-fg">
+                                {meal}
+                            </span>
+
+                            <span className="text-[10px] text-muted">
+                                {calories}
+                            </span>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        );
+    }
+
+    if (type === "indigenous") {
+        return (
+            <div className="mt-7 overflow-hidden rounded-xl border border-line bg-white">
+                <div className="relative h-24">
+                    <img
+                        src="/images/hero-image2.jpg"
+                        alt="Indigenous meal"
+                        className="h-full w-full object-cover"
+                    />
+
+                    <div className="absolute inset-0 bg-black/20" />
+
+                    <div className="absolute bottom-2 left-2 flex items-center gap-1.5 rounded-full bg-white/90 px-2.5 py-1">
+                        <IconScan size={12} className="text-green" />
+                        <span className="text-[10px] font-semibold text-fg">
+                            Ghanaian & Nigerian
+                        </span>
+                    </div>
+                </div>
+
+                <div className="flex items-center justify-between p-3">
+                    <div>
+                        <p className="text-xs font-semibold text-fg">
+                            Indigenous meal detected
+                        </p>
+                        <p className="mt-1 text-[10px] text-muted">
+                            Nutrition estimate ready
+                        </p>
+                    </div>
+
+                    <IconCheck size={15} className="text-green" stroke={2.5} />
+                </div>
+            </div>
+        );
+    }
+
+    if (type === "fix-scan") {
+        return (
+            <div className="mt-7 rounded-xl border border-line bg-white p-3">
+                <div className="flex items-center justify-between">
+                    <span className="text-xs font-medium text-muted">
+                        Scan result
+                    </span>
+
+                    <span className="flex items-center gap-1 text-[10px] font-semibold text-green">
+                        <IconEdit size={11} />
+                        Editable
+                    </span>
+                </div>
+
+                <div className="mt-3 rounded-lg bg-green-light/60 p-3">
+                    <div className="flex items-center justify-between">
+                        <span className="text-[11px] font-semibold text-fg">
+                            Jollof Rice
+                        </span>
+
+                        <span className="text-[10px] text-muted">
+                            520 kcal
+                        </span>
+                    </div>
+
+                    <div className="mt-2 grid grid-cols-3 gap-1.5">
+                        {[
+                            ["Protein", "18g"],
+                            ["Carbs", "72g"],
+                            ["Fat", "16g"],
+                        ].map(([label, value]) => (
+                            <div
+                                key={label}
+                                className="rounded-md bg-white px-2 py-1.5"
+                            >
+                                <p className="text-[9px] text-muted">
+                                    {label}
+                                </p>
+
+                                <p className="mt-0.5 text-[10px] font-semibold text-fg">
+                                    {value}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
     return (
         <div className="mt-7 rounded-xl border border-line bg-white p-3">
             <div className="flex items-center justify-between">
@@ -287,7 +445,6 @@ export default function CoreFeatures() {
                         your nutrition, and making better choices every day.
                     </p>
                 </motion.div>
-
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"
@@ -296,7 +453,7 @@ export default function CoreFeatures() {
                         once: true,
                         amount: 0.15,
                     }}
-                    className="mx-auto mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-6"
+                    className="mx-auto mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-6"
                 >
                     {features.map((feature, index) => {
                         const Icon = feature.icon;
@@ -312,17 +469,16 @@ export default function CoreFeatures() {
                                     duration: 0.3,
                                     ease: "easeOut",
                                 }}
-                                className={`group relative overflow-hidden rounded-3xl border border-line bg-white p-5 shadow-sm transition-shadow duration-300 hover:shadow-xl hover:shadow-black/5 sm:p-6 ${index < 3
-                                    ? "lg:col-span-2"
-                                    : "lg:col-span-3"
+                                className={`group relative flex h-full flex-col overflow-hidden rounded-3xl border border-line bg-white p-5 shadow-sm transition-shadow duration-300 hover:shadow-xl hover:shadow-black/5 sm:p-6 ${index < 3
+                                        ? "lg:col-span-2"
+                                        : index < 5
+                                            ? "lg:col-span-3"
+                                            : "lg:col-span-2"
                                     }`}
                             >
                                 <div className="flex items-start justify-between">
                                     <div className="flex size-11 items-center justify-center rounded-md bg-green-light text-green transition-all duration-300 group-hover:bg-green group-hover:text-white">
-                                        <Icon
-                                            size={21}
-                                            stroke={1.8}
-                                        />
+                                        <Icon size={21} stroke={1.8} />
                                     </div>
 
                                     <span className="text-sm font-semibold uppercase tracking-wider text-muted/60">
@@ -339,6 +495,16 @@ export default function CoreFeatures() {
                                 </p>
 
                                 <FeaturePreview type={feature.type} />
+
+                                <a
+                                    href="#"
+                                    className="mt-auto pt-6 inline-flex w-fit items-center gap-2 text-sm font-medium text-green transition-colors duration-200 hover:text-green-dark"
+                                >
+                                    {feature.button}
+                                    <span className="transition-transform duration-200 group-hover:translate-x-1">
+                                        →
+                                    </span>
+                                </a>
 
                                 <div className="pointer-events-none absolute -bottom-20 -right-20 size-40 rounded-full bg-green-light/40 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100" />
                             </motion.div>

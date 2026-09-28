@@ -47,7 +47,7 @@ const resultItems = [
 
 export default function IndigenousMealScanner() {
     return (
-        <section className="relative overflow-hidden bg-white pb-14 sm:pb-20">
+        <section className="relative overflow-hidden bg-white py-14 sm:py-20">
             <div className="container mx-auto px-5 md:px-8">
                 <div className="grid items-center gap-16 lg:grid-cols-2 lg:gap-20">
 

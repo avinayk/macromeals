@@ -5,6 +5,9 @@ import ProblemSection from '@/components/Problemsection'
 import HowItWorks from '@/components/HowltWorks'
 import IndigenousMealScanner from '@/components/IrdigenousMealScanner'
 import CoreFeatures from '@/components/CoreFeatures'
+import AppExperience from '@/components/AppExperience'
+import Testimonials from '@/components/Testimonials'
+import Faq from '@/components/Faq'
 
 export default function page() {
   return (
@@ -15,6 +18,9 @@ export default function page() {
       <HowItWorks />
       <IndigenousMealScanner />
       <CoreFeatures />
+      <AppExperience />
+      <Testimonials />
+      <Faq />
     </>
   )
 }

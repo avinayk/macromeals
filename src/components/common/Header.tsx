@@ -52,7 +52,7 @@ export default function Header() {
                         ))}
 
                         <Link
-                            href="#download"
+                            href="https://play.google.com/store/apps/details?id=com.macromeals.app&hl=en"
                             onClick={closeMenu}
                             className="ms-6 flex items-center justify-center gap-3 rounded-md border border-green/20 bg-green px-3 py-2.5 text-white shadow-lg shadow-green/15 transition-all duration-300 hover:-translate-y-0.5 hover:bg-green-dark hover:shadow-xl hover:shadow-green/20"
                         >
