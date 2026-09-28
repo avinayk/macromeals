@@ -107,7 +107,7 @@ export default function Testimonials() {
                         duration: 0.7,
                         ease: [0.22, 1, 0.36, 1],
                     }}
-                    className="relative mt-16"
+                    className="relative mt-16 overflow-hidden"
                 >
                     <Swiper
                         modules={[Autoplay, Pagination]}
@@ -139,7 +139,7 @@ export default function Testimonials() {
                                 key={testimonial.name}
                                 className="h-auto"
                             >
-                                <article className="group flex h-full min-h-[285px] flex-col rounded-[24px] border border-line bg-surface p-6 transition-all duration-300 hover:-translate-y-1 hover:border-green/20 hover:bg-white hover:shadow-xl hover:shadow-black/5 sm:p-7">
+                                <article className="group flex h-full min-h-[285px] flex-col rounded-[24px] border border-line bg-surface p-6 transition-all duration-300  hover:border-green/20 hover:bg-white hover:shadow-xl hover:shadow-black/5 sm:p-7">
                                     <div className="flex items-center justify-between">
                                         <div className="flex gap-1">
                                             {[1, 2, 3, 4, 5].map((star) => (

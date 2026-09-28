@@ -106,7 +106,7 @@ export default function IndigenousMealScanner() {
                                 whileTap={{ scale: 0.97 }} className="mt-9 flex flex-col gap-3 sm:flex-row">
                                 <a
                                     href="#"
-                                    className="group inline-flex items-center gap-3 rounded-md bg-green px-4 py-3 text-left text-white shadow-lg shadow-black/10 transition-all duration-300 hover:-translate-y-0.5 hover:bg-green hover:shadow-xl hover:shadow-green/15 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green"
+                                    className="group inline-flex items-center gap-3 rounded-md bg-green px-4 py-3 text-left text-white shadow-lg shadow-black/10 transition-all duration-300 hover:-translate-y-0.5 hover:bg-green hover:shadow-xl hover:shadow-green/15 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green w-fit"
                                 >
                                     <span className="flex size-9 shrink-0 text-green items-center justify-center rounded-md bg-white">
                                         <IconBrandAppstore className="size-5" stroke={1.8} />
@@ -129,7 +129,7 @@ export default function IndigenousMealScanner() {
 
                                 <a
                                     href="#"
-                                    className="group inline-flex  items-center gap-3 rounded-md border border-line bg-white px-5 py-3 text-left shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-green/30 hover:bg-green-light hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green"
+                                    className="group inline-flex  items-center gap-3 rounded-md border border-line bg-white px-5 py-3 text-left shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-green/30 hover:bg-green-light hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green w-fit"
                                 >
                                     <span className="flex size-9 shrink-0 items-center justify-center rounded-md bg-green-light text-green">
                                         <IconBrandGooglePlay className="size-5" stroke={1.8} />

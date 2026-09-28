@@ -7,7 +7,10 @@ import IndigenousMealScanner from '@/components/IrdigenousMealScanner'
 import CoreFeatures from '@/components/CoreFeatures'
 import AppExperience from '@/components/AppExperience'
 import Testimonials from '@/components/Testimonials'
+import Pricing from '@/components/Pricing'
 import Faq from '@/components/Faq'
+import FinalCTA from '@/components/common/FinalCTA'
+import Footer from '@/components/common/Footer'
 
 export default function page() {
   return (
@@ -20,7 +23,10 @@ export default function page() {
       <CoreFeatures />
       <AppExperience />
       <Testimonials />
+      <Pricing />
       <Faq />
+      <FinalCTA />
+      <Footer />
     </>
   )
 }
