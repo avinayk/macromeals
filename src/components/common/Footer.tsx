@@ -164,7 +164,7 @@ export default function Footer() {
 
                     <a
                         href="#"
-                        className="text-xs font-medium text-muted transition-colors hover:text-white"
+                        className="text-xs font-medium text-muted transition-colors hover:text-green"
                     >
                         Back to top ↑
                     </a>
