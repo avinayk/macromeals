@@ -95,7 +95,7 @@ export default function FAQ() {
                             </p>
 
                             <a
-                                href="#contact"
+                                href="/contact"
                                 className="group mt-5 inline-flex items-center gap-2 rounded-md px-4 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 bg-green"
                             >
                                 Contact us

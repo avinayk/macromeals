@@ -14,12 +14,12 @@ export default function Header() {
     const [open, setOpen] = useState(false)
 
     const links = [
-        { label: 'Home', href: '#home' },
-        { label: 'Features', href: '#features' },
-        { label: 'How It Works', href: '#how-it-works' },
-        { label: 'Pricing', href: '#pricing' },
+        { label: 'Home', href: '/#home' },
+        { label: 'Features', href: '/#features' },
+        { label: 'How It Works', href: '/#how-it-works' },
+        { label: 'Pricing', href: '/#pricing' },
         { label: 'Blog', href: '/blog' },
-        { label: 'FAQ', href: '#faq' },
+        { label: 'FAQ', href: '/#faq' },
     ]
 
     const closeMenu = () => setOpen(false)
